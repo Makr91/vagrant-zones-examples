@@ -69,7 +69,7 @@ class Hosts
                   vm.shared_disk_enabled                  = host['shared_lofs_disk_enabled']
                   vm.shared_dir                           = host['shared_lofs_dir']
                   vm.os_type                              = host['os_type']
-                  vm.zunlockboot                          = host['zunlockboot']
+                  vm.zunlockbootkey                       = host['zunlockbootkey']
                   vm.diskif                               = host['diskif']
                   vm.netif                                = host['netif']
                   vm.hostbridge                           = host['hostbridge']
