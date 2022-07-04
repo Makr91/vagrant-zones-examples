@@ -13,6 +13,7 @@ class Hosts
         config.vm.define "#{host['partition_id']}--#{host['name']}", autostart: autostart do |server|
           server.vm.box = host['box']       
           server.vm.boot_timeout = 900
+          server.vm.guest = :windows if host['os_type'] == "windows"
   
           # Setup SSH and Prevent TTY errors
           server.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
